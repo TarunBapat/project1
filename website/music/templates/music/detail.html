@@ -1,0 +1,30 @@
+
+{% extends 'music/base.html' %}
+
+{% block title %}Albums detail {% endblock %}
+{% block body %}
+<div class="container">
+<img src="{{album.album_logo.url }}" height="500px" width="300px"/>
+<h1>{{ album.album_title}}</h1>
+
+<br>
+<h1>{{album.artist}}</h1>
+<br>
+{% if error_message %}
+<p><strong>{{error_message}}</strong></p>
+{% endif %}
+
+</div>
+   <div class="container">
+       {% for song in album.song_set.all %}
+
+    {{song.song_title}}
+    {% if song.is_favourite %}
+          <img src="http://i.imgur.com/b9b13Rd.png"/>
+    {% endif %}
+<br>
+   {% endfor %} 
+</div>
+<br>
+<br>
+{% endblock %}

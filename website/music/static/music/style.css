@@ -1,0 +1,9 @@
+body{
+    background-image:  url('images/music.jpg') ;
+}
+.navbar{
+    border-radius: 0%
+}
+.navbar-brand{
+    font-family: 'Pacifico', cursive;
+}
